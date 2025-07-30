@@ -10,7 +10,7 @@ import wordpress_img from "../../img/wordpress.webp";
 import { FiArrowRight } from "react-icons/fi";
 
 import html_img from "../../img/html.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 const Home = () => {
   let tech_stack = [
     {

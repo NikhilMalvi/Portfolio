@@ -4,7 +4,7 @@ import Container from "../Components/Container";
 import { useState } from "react";
 
 function App() {
-  const body = document.querySelector("body");
+  // const body = document.querySelector("body");
 
   const [openmenu, setopenmenu] = useState(true);
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Menu
-        isLightMode={body.classList.contains("light-mode")}
+        // isLightMode={body.classList.contains("light-mode")}
         open={open}
         close={close}
         openmenu={openmenu}

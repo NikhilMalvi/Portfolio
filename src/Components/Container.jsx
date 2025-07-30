@@ -8,7 +8,12 @@ const Container = ({ open, close, openmenu }) => {
   const close_menu = close;
   const isOpen = openmenu;
   return (
-    <div className="container" onClick={isOpen ? "" : close_menu}>
+    <div
+      className="container"
+      onClick={() => {
+        if (!isOpen) close_menu();
+      }}
+    >
       <TopContainer
         open_menu={open_menu}
         close_menu={close_menu}

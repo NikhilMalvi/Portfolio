@@ -8,7 +8,11 @@ import Dark_logo from "../img/Dark-logo.png";
 import "./Menu.css";
 
 const Menu = ({ open, close, openmenu, setopenmenu }) => {
-  const [logo, setLogo] = useState(Light_logo);
+  // const [logo, setLogo] = useState(Light_logo);
+  const savedTheme = localStorage.getItem("theme") || "light-mode";
+  const [logo, setLogo] = useState(
+    savedTheme === "light-mode" ? Light_logo : Dark_logo
+  );
 
   useEffect(() => {
     const updateLogo = () => {
