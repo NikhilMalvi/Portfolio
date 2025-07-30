@@ -10,7 +10,7 @@ import Card6 from "../img/card6.jpg";
 import MainRightTop from "./MainRightTop";
 import MainRightBotton from "./MainRightBotton";
 import Home from "./Home/Home";
-import Sidebar from "./Sidebar/sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
 import Project from "./Projects/Project";
