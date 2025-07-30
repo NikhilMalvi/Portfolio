@@ -28,7 +28,7 @@ const Menu = ({ open, close, openmenu }) => {
   return (
     <div className={openmenu ? "header openMenu" : "header closeMenu"}>
       <div className="logo">
-        <img src={logo} alt="" className="light" />
+        <img src={logo} alt="" />
       </div>
 
       <nav>
