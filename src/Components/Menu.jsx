@@ -3,16 +3,12 @@ import { IoMdHome } from "react-icons/io";
 import { MdGroups2, MdContactPage } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import Icon from "./Icon";
-import Light_logo from "../img/Light-logo.png";
-import Dark_logo from "../img/Dark-logo.png";
+import Light_logo from "../img/Light_logo.png";
+import Dark_logo from "../img/Dark_logo.png";
 import "./Menu.css";
 
-const Menu = ({ open, close, openmenu, setopenmenu }) => {
-  // const [logo, setLogo] = useState(Light_logo);
-  const savedTheme = localStorage.getItem("theme") || "light-mode";
-  const [logo, setLogo] = useState(
-    savedTheme === "light-mode" ? Light_logo : Dark_logo
-  );
+const Menu = ({ open, close, openmenu }) => {
+  const [logo, setLogo] = useState(Light_logo);
 
   useEffect(() => {
     const updateLogo = () => {
