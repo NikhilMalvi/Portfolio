@@ -1,5 +1,5 @@
 import React from "react";
-import "./Container.CSS";
+import "./Container.css";
 import TopContainer from "./TopContainer";
 import MainContainer from "./MainContainer";
 import Home from "./Home/Home";
