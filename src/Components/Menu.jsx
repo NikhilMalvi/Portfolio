@@ -3,8 +3,8 @@ import { IoMdHome } from "react-icons/io";
 import { MdGroups2, MdContactPage } from "react-icons/md";
 import { FaLaptopCode } from "react-icons/fa";
 import Icon from "./Icon";
-import Light_logo from "../img/Light_logo.png";
-import Dark_logo from "../img/Dark_logo.png";
+import Light_logo from "../assets/Light_logo.png";
+import Dark_logo from "../assets/Dark_logo.png";
 import "./Menu.css";
 
 const Menu = ({ open, close, openmenu }) => {
@@ -17,12 +17,14 @@ const Menu = ({ open, close, openmenu }) => {
       );
     };
 
-    updateLogo();
+    updateLogo(); // run on mount
 
     const checkbox = document.getElementById("theme-checkbox");
     checkbox?.addEventListener("change", updateLogo);
 
-    return () => checkbox?.removeEventListener("change", updateLogo);
+    return () => {
+      checkbox?.removeEventListener("change", updateLogo);
+    };
   }, []);
 
   return (
