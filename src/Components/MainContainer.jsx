@@ -16,7 +16,7 @@ import Contact from "./Contact/Contact";
 import Project from "./Projects/Project";
 import Singal_post from "./Projects/Project_templeted/Singal_post";
 import { Outlet } from "react-router";
-import Loader from "./Loader/loader";
+import Loader from "./Loader/Loader";
 
 const MainContainer = () => {
   return (
