@@ -8,7 +8,7 @@ import Dark_logo from "../assets/Dark_logo.png";
 import "./Menu.css";
 
 const Menu = ({ openmenu }) => {
-  const [logo, setLogo] = useState(Dark_logo);
+  const [logo, setLogo] = useState(null);
 
   useEffect(() => {
     const updateLogo = () => {
