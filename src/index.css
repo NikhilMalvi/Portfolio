@@ -172,3 +172,9 @@ li#menu-item-8 a.hfe-menu-item:hover:after {
     padding: 30px;
   }
 }
+
+@media (max-width: 550px) {
+  .section_container {
+    padding: 20px;
+  }
+}

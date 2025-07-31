@@ -222,4 +222,8 @@
   .row2 .image_boxes img {
     max-width: 80%;
   }
+
+  section.section_container.row2 {
+    padding: 20px;
+  }
 }

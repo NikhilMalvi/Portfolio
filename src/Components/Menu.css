@@ -157,6 +157,23 @@ nav .mainmenu li a:hover span.hover_heading {
   transform: translateY(-12px);
 }
 
+.th-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0009;
+  z-index: 9998;
+  width: 0;
+  height: 100vh;
+  -webkit-transition: all 0.4s cubic-bezier(0.6, 0.1, 0.68, 0.53) !important;
+  transition: all 0.4s cubic-bezier(0.6, 0.1, 0.68, 0.53) !important;
+  opacity: 1;
+  visibility: visible;
+  display: none;
+  overflow-y: scroll !important;
+}
+
 .Menuitem_hover:hover span.firstIcon {
   -o-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -193,5 +210,14 @@ nav .mainmenu li a:hover span.hover_heading {
     transform: translateX(0);
     z-index: 9999;
     background: var(--background-color);
+  }
+
+  .th-menu-wrapper {
+    display: block;
+  }
+
+  .th-menu-wrapper.th-menu-active {
+    width: 100%;
+    overflow-y: hidden;
   }
 }

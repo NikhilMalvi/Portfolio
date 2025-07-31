@@ -119,3 +119,36 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .singal_container {
+    padding: 15px;
+  }
+
+  .post_icons {
+    max-width: 100%;
+    flex: 1 1 100%;
+    /* justify-content: center; */
+  }
+
+  .list_post_data {
+    justify-content: center;
+  }
+
+  .post_icons,
+  .post_icons a {
+    font-size: 14px;
+  }
+
+  .singal_post .col2 {
+    margin-top: 0px;
+  }
+
+  .singal_post .col2 h1 {
+    font-size: 15px;
+  }
+
+  .singal_post .col2 h1 span {
+    font-size: 13px;
+  }
+}

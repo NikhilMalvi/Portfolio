@@ -14,7 +14,7 @@
 .topContainer .inputBox {
   width: 350px;
   max-width: 350px;
-  height: 45px;
+  /* height: 45px; */
   position: relative;
 }
 
@@ -157,14 +157,6 @@
     width: 100%;
     padding: 20px;
     padding-top: 35px;
-  }
-}
-
-@media (max-width: 700px) {
-  .hero-title {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.5;
   }
 }
 

@@ -7,7 +7,7 @@ import Light_logo from "../assets/Light_logo.png";
 import Dark_logo from "../assets/Dark_logo.png";
 import "./Menu.css";
 
-const Menu = ({ openmenu }) => {
+const Menu = ({ openmenu, close }) => {
   const [logo, setLogo] = useState(null);
 
   useEffect(() => {
@@ -26,29 +26,39 @@ const Menu = ({ openmenu }) => {
   }, []);
 
   return (
-    <div className={openmenu ? "header openMenu" : "header closeMenu"}>
-      <div className="logo">
-        <img src={logo} alt="logo" />
-      </div>
+    <>
+      <div
+        className={
+          openmenu ? "th-menu-wrapper" : "th-menu-wrapper th-menu-active"
+        }
+        onClick={() => {
+          if (!openmenu) close();
+        }}
+      ></div>
+      <div className={openmenu ? "header openMenu" : "header closeMenu"}>
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
 
-      <nav>
-        <ul className="mainmenu">
-          <Icon Icon={<IoMdHome />} icon_name="" Icon_title="home" />
-          <Icon Icon={<MdGroups2 />} icon_name="about" Icon_title="about" />
-          <Icon
-            Icon={<FaLaptopCode />}
-            icon_name="project"
-            Icon_title="project"
-          />
-          <Icon
-            Icon={<MdContactPage />}
-            icon_name="contact"
-            Icon_title="contact"
-          />
-        </ul>
-        <div className="border-span"></div>
-      </nav>
-    </div>
+        <nav>
+          <ul className="mainmenu">
+            <Icon Icon={<IoMdHome />} icon_name="" Icon_title="home" />
+            <Icon Icon={<MdGroups2 />} icon_name="about" Icon_title="about" />
+            <Icon
+              Icon={<FaLaptopCode />}
+              icon_name="project"
+              Icon_title="project"
+            />
+            <Icon
+              Icon={<MdContactPage />}
+              icon_name="contact"
+              Icon_title="contact"
+            />
+          </ul>
+          <div className="border-span"></div>
+        </nav>
+      </div>
+    </>
   );
 };
 
