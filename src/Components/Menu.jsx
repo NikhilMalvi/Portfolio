@@ -7,8 +7,8 @@ import Light_logo from "../assets/Light_logo.png";
 import Dark_logo from "../assets/Dark_logo.png";
 import "./Menu.css";
 
-const Menu = ({ open, close, openmenu }) => {
-  const [logo, setLogo] = useState(Light_logo);
+const Menu = ({ openmenu }) => {
+  const [logo, setLogo] = useState(Dark_logo);
 
   useEffect(() => {
     const updateLogo = () => {
@@ -17,20 +17,18 @@ const Menu = ({ open, close, openmenu }) => {
       );
     };
 
-    updateLogo(); // run on mount
+    updateLogo();
 
     const checkbox = document.getElementById("theme-checkbox");
     checkbox?.addEventListener("change", updateLogo);
 
-    return () => {
-      checkbox?.removeEventListener("change", updateLogo);
-    };
+    return () => checkbox?.removeEventListener("change", updateLogo);
   }, []);
 
   return (
     <div className={openmenu ? "header openMenu" : "header closeMenu"}>
       <div className="logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
       </div>
 
       <nav>
