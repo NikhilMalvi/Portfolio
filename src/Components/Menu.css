@@ -198,6 +198,7 @@ nav .mainmenu li a:hover span.hover_heading {
     position: fixed;
     top: 0;
     left: 0;
+    height: 100vh;
     background: var(--background-color);
     z-index: 9999;
     transform: translateX(-100%);
@@ -207,6 +208,7 @@ nav .mainmenu li a:hover span.hover_heading {
 
   .header.closeMenu {
     position: fixed;
+    height: 100vh;
     transform: translateX(0);
     z-index: 9999;
     background: var(--background-color);
